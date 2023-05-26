@@ -1,16 +1,16 @@
 :root {
   // fonts
-  --main-font: 'Alata';
-  --font-title: 'Archivo';
+  --main-font: 'Playfair Display', serif;
+  --font-title: 'playfair-display';
 
   // colors
-  --color-orange: #fb5b3b;
+  --color-orange: #a5ae88;
   --color-orange-light: #FFF3DF;
-  --color-black: #333333;
-  --color-text: #868686;
+  --color-black: #3b3328;
+  --color-text: #3b3328;
   --color-white: #FFFFFF;
   --color-gray: #706c61;
-  --color-red: #FF0000;
+  --color-red: #a78f80;
 }
 
 @mixin inputPlaceholder() {

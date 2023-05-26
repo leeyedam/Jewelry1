@@ -3,16 +3,16 @@ import Footer from '../../components/footer';
 import Layout from '../../layouts/Main';
 import Breadcrumb from '../../components/breadcrumb';
 import ProductsFeatured from '../../components/products-featured';
-import Gallery from '../../components/room-single/gallery';
-import Content from '../../components/room-single/content';
-import Description from '../../components/room-single/description';
-import Reviews from '../../components/room-single/reviews';
+import Gallery from '../../components/facilities-single/gallery';
+import Content from '../../components/facilities-single/content';
+import Description from '../../components/facilities-single/description';
+import Reviews from '../../components/facilities-single/reviews';
 import { server } from '../../utils/server'; 
 
 export async function getServerSideProps({ query }) {
 
   const pid = query.pid;
-  const res = await fetch(`${server}/api/rooms/${pid}`);
+  const res = await fetch(`${server}/api/products/${pid}`);
   const product = await res.json();
 
   return {
@@ -37,13 +37,7 @@ const place = ({ product }) => {
           </div>
 
           <div className="product-single__info">
-            <div className="product-single__info-btns">
-              <button type="button" onClick={() => setShowBlock('description')} className={`btn btn--rounded ${showBlock === 'description' ? 'btn--active' : ''}`}>Description</button>
-              <button type="button" onClick={() => setShowBlock('reviews')} className={`btn btn--rounded ${showBlock === 'reviews' ? 'btn--active' : ''}`}>Reviews (2)</button>
-            </div>
-
             <Description product={product} show={showBlock === 'description'} />
-            <Reviews product={product} show={showBlock === 'reviews'} />
           </div>
         </div>
       </section>

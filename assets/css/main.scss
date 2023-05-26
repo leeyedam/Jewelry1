@@ -8,7 +8,7 @@ html,body{overflow-x:hidden !important}
 // google fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @mixin placeholder {
   &::-webkit-input-placeholder {
@@ -75,7 +75,7 @@ html,body{overflow-x:hidden !important}
 
 body {
   box-sizing: border-box;
-  background-color: white;
+  background-color: #8c7d66;
   font-family: var(--main-font);
   color: var(--color-text);
   font-size: 16px;
@@ -205,11 +205,11 @@ h1,h2,h3,h4,h5 {
 }
 
 .btn {
-  color: #000000;
+  color: #fff;
   cursor: pointer;
   &.btn--rounded {
     font-size: 12px;
-    background: #FFF;
+    background: transparent;
     display: inline-block;
     border-radius: 50px;
     padding: 11px 20px;
@@ -220,7 +220,7 @@ h1,h2,h3,h4,h5 {
       padding: 15px 25px;
     }
     &.btn--border {
-      border: 1px solid #D8D8D8;
+      border: 1px solid #fff;
     }
     &.btn--yellow {
       background-color: var(--color-orange);
@@ -247,7 +247,7 @@ h1,h2,h3,h4,h5 {
     display: flex;
     li {
       font-size: 13px;
-      color: #B2B2B2;
+      color: #543636;
       &:not(:first-child) {
         margin-left: 10px;
         &:before {
@@ -326,9 +326,9 @@ h1,h2,h3,h4,h5 {
     margin-left: auto;
     margin-right: auto;
     position: fixed;
-    background-color: #FFF;
+    background-color: #3b3328;
     transition: all .3s ease;
-    border-left: 1px solid #E5E5E5;
+    border-left: 1px solid #3b3328;
     @include breakpoint(tablet-lg) {
       position: relative;
       height: auto;
@@ -346,6 +346,9 @@ h1,h2,h3,h4,h5 {
       @include breakpoint(tablet-lg) {
         display: none;
       }
+      p{
+        color: #fff;
+      }
     }
     &.site-nav--open {
       right: 0;
@@ -354,7 +357,7 @@ h1,h2,h3,h4,h5 {
       font-size: 15px;
       font-weight: 500;
       width: 100%;
-      color: #000;
+      color: #ffffff;
       display: block;
       text-align: left;
       padding: 15px 18px;
@@ -370,23 +373,23 @@ h1,h2,h3,h4,h5 {
   }
   &.site-header--fixed {
     border-bottom: 1px solid #E5E5E5;
-    background-color: #FFF;
+    background-color: #8b7e6678;
     .btn-hamburger {
       &:before, &:after, span {
-        background-color: #000;
+        background-color: #ffffff;
       }
     }
     a, i {
-      color: #000;
+      color: #fff;
     }
     button {
-      color: #000;
+      color: #ffffff;
       i {
-        color: #000;
+        color: #fff;
       }
     }
     .site-logo {
-      color: #000;
+      color: #fff;
     }
   }
   .search-form-wrapper {
@@ -537,78 +540,7 @@ h1,h2,h3,h4,h5 {
   .swiper-pagination-progressbar {
     
   }
-  .shop-data {
-    bottom: 0;
-    left: 0;
-    width: 80%;
-    z-index: 99;
-    display: none;
-    position: absolute;
-    padding: 36px 30px 30px 30px;
-    @include breakpoint(phone) {
-      display: block;
-    }
-    &:before {
-      background: #FFF;
-      content: '';
-      left: 0;
-      bottom: 0;
-      top: 0;
-      width: 100%;
-      display: block;
-      z-index: 1;
-      border-radius: 0 70px 0 0;
-      position: absolute;
-    }
-    .shop-data__items {
-      width: 100%;
-      z-index: 10;
-      display: flex;
-      justify-content: flex-end;
-      position: relative;
-      li {
-        display: flex;
-        margin-left: 80px;
-        @include breakpoint(phone) {
-          display: block;
-          margin-left: 30px;
-        }
-        @include breakpoint(tablet-lg) {
-          margin-left: 80px;
-          display: flex;
-        }
-        i {
-          margin-right: 27px;
-          height: 39px;
-          width: 39px;
-          font-size: 13px;
-          flex-shrink: 0;
-          display: flex;
-          border-radius: 10px;
-          color: var(--color-orange);
-          background: var(--color-orange-light);
-          justify-content: center;
-          align-items: center;
-          @include breakpoint(phone) {
-            margin-bottom: 15px;
-          }
-          @include breakpoint(tablet-lg) {
-            margin-bottom: 0;
-          }
-        }
-        .data-item__content {
-          h4 {
-            font-size: 14px;
-            margin-bottom: 7px;
-          }
-          p {
-            font-size: 12px;
-            line-height: 135%;
-          }
-        }
-      }
-    }
-  }
+  
   .page-intro__slide {
     height: 450px;
     position: relative;
@@ -617,7 +549,7 @@ h1,h2,h3,h4,h5 {
     background-size: cover;
     background-color: #FAFAFA;
     @include breakpoint(phone) {
-      height: 90vh;
+      height: 100vh;
     }
     &:before {
       content: '';
@@ -632,14 +564,16 @@ h1,h2,h3,h4,h5 {
       z-index: 10;
       display: flex;
       position: relative;
+      justify-content: end;
       align-items: center;
       height: 100%;
     }
     .page-intro__slide__content {
+      text-align: end;
       margin-top: auto;
       margin-bottom: 40px;
       @include breakpoint(phone) {
-        margin-bottom: 80px;
+        margin-bottom: 0px;
         margin-top: 0;
       }
       h2 {
@@ -650,6 +584,18 @@ h1,h2,h3,h4,h5 {
         margin-bottom: 45px;
         @include breakpoint(phone) {
           font-size: 64px;
+          width: 600px;
+        }
+      }
+      h3 {
+        font-size: 16px;
+        // font-style: italic;
+        color: #FFF;
+        font-weight: 400;
+        line-height: 140%;
+        margin-bottom: 45px;
+        @include breakpoint(phone) {
+          font-size: 28px;
           width: 600px;
         }
       }
@@ -675,11 +621,13 @@ h1,h2,h3,h4,h5 {
 }
 
 .featured {
-  padding: 35px 0 62px 0;
+  padding: 55px 0 55px 0;
   @include breakpoint(phone) {
-    padding: 70px 0 92px 0;
+    height: 100vh;
+    padding: 132px 0 92px 0;
   }
   .container {
+    align-items: center;
     @include breakpoint(phone) {
       display: flex;
       flex-wrap: wrap;
@@ -689,7 +637,31 @@ h1,h2,h3,h4,h5 {
       display: grid;
       grid-gap: 34px;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas: "\31  \31  \31  \31  \31  \31  \32  \32  \32  \33  \33  \33 ";
+      grid-template-areas: "\31  \31  \31  \31  \31  \31  \32  \32  \32  \32  \33  \33 ";
+    }
+    h3 {
+      font-size: 36px;
+      color: #1a1a1a;
+      font-weight: 600;
+      line-height: 120%;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      @include breakpoint(phone) {
+        font-size: 64px;
+        margin-bottom: 45px;
+        width: 600px;
+      }
+    }
+    h4 {
+      font-size: 16px;
+      // font-style: italic;
+      color: #1a1a1a;
+      font-weight: 400;
+      line-height: 140%;
+      @include breakpoint(phone) {
+        font-size: 28px;
+        width: 600px;
+      }
     }
   }
   .featured-item-large {
@@ -715,7 +687,7 @@ h1,h2,h3,h4,h5 {
     }
   }
   .featured-item {
-    height: 200px;
+    height: 270px;
     display: flex;
     margin-bottom: 10px;
     background-position: center;
@@ -724,7 +696,7 @@ h1,h2,h3,h4,h5 {
     padding: 21px 22px;
     position: relative;
     @include breakpoint(phone) {
-      height: 375px;
+      height: 575px;
       padding: 55px 46px;
       margin-bottom: 10px;
     }
@@ -740,22 +712,6 @@ h1,h2,h3,h4,h5 {
       height: 100%;
       position: absolute;
       background: rgba(0,0,0, 0.28);
-    }
-    .featured-item__content {
-      margin-top: auto;
-      position: relative;
-      z-index: 2;
-      h3 {
-        font-weight: 400;
-        font-size: 20px;
-        color: #FFF;
-        margin-bottom: 15px;
-        line-height: 150%;
-        @include breakpoint(phone) {
-          font-size: 23px;
-          margin-bottom: 20px;
-        }
-      }
     }
   }
 }
@@ -879,6 +835,9 @@ h1,h2,h3,h4,h5 {
     }
   }
   .product__description {
+    .main__h3{
+      color: #fff;
+    }
     h3 {
       margin-bottom: 9px;
       font-weight: 600;
@@ -907,7 +866,7 @@ h1,h2,h3,h4,h5 {
       }
       &.product__price--discount {
         h4 {
-          color: #FF0000;
+          color: #a78f80;
         }
       }
     }
@@ -924,6 +883,7 @@ h1,h2,h3,h4,h5 {
       margin-bottom: 65px;
     }
     h3 {
+      color: #fff;
       font-weight: 300;
       font-size: 18px;
       @include breakpoint(phone) {
@@ -1087,7 +1047,7 @@ h1,h2,h3,h4,h5 {
     }
     h6 {
       display: flex;
-      color: #000;
+      color: #3b3328;
       font-size: 24px;
       font-weight: 300;
       align-items: center;
@@ -1112,7 +1072,7 @@ h1,h2,h3,h4,h5 {
   }
   .site-footer__links {
     @include breakpoint(phone) {
-      display: flex;
+      // display: flex;
       width: 100%;
     }
     @include breakpoint(tablet-lg) {
@@ -1132,7 +1092,7 @@ h1,h2,h3,h4,h5 {
       }
       li {
         font-size: 14px;
-        color: #000;
+        color: #3b3328;
         margin-bottom: 12px;
         @include breakpoint(phone) {
           margin-bottom: 15px;
@@ -1258,7 +1218,7 @@ h1,h2,h3,h4,h5 {
   text-align: center;
   font-size: 14px;
   display: flex;
-  color: #000;
+  color: #3b3328;
   margin-bottom: 18px;
   align-items: center;
   .checkbox__check {
@@ -1507,7 +1467,7 @@ h1,h2,h3,h4,h5 {
   font-weight: 300;
   font-size: 14px;
   display: flex;
-  color: #000;
+  color: #fff;
   margin-bottom: 18px;
   align-items: center;
   .checkbox__check {
@@ -1517,7 +1477,7 @@ h1,h2,h3,h4,h5 {
     flex-shrink: 0;
     position: relative;
     margin-right: 18px;
-    border: 1px solid #D4D4D4; 
+    border: 1px solid #fff; 
     &:before {
       display: block;
       content: '';
@@ -1529,7 +1489,7 @@ h1,h2,h3,h4,h5 {
       height: 12.5px;
       transform: scale(1) rotate(45deg);
       z-index: 100;
-      border: 1px solid black;
+      border: 1px solid #fff;
       -webkit-transition: all .2s linear;
       -o-transition: all .2s linear;
       transition: all .2s linear;
@@ -1621,7 +1581,7 @@ h1,h2,h3,h4,h5 {
     @include breakpoint(tablet-lg) {
       margin-right: 63px;
       margin-bottom: 85px;
-      width: calc(100%/2 - 63px);
+      width: calc(100%/3 - 63px);
     }
   }
 }
@@ -1807,7 +1767,7 @@ h1,h2,h3,h4,h5 {
 
 .product-content {
   position: relative;
-  .product-content__intro {
+  .product-content {
     margin-bottom: 40px;
     @include breakpoint(phone) {
       margin-bottom: 60px;
@@ -1821,6 +1781,7 @@ h1,h2,h3,h4,h5 {
     h5 {
       font-weight: 300;
       font-size: 13px;
+      margin-top: 20px;
       margin-bottom: 19px;
       strong {
         font-weight: 700;
@@ -1841,7 +1802,7 @@ h1,h2,h3,h4,h5 {
           height: 43px;
           margin-right: 13px;
         }
-        .checkbox__check {
+        .__check {
           border: 1px solid #D4D4D4;
           
         }
@@ -1899,7 +1860,7 @@ h1,h2,h3,h4,h5 {
     }
   }
   .product-on-sale {
-    background-color: #FF0000;
+    background-color: #a78f80;
     color: #FFF;
     font-size: 11px;
     font-weight: 500;
@@ -2148,7 +2109,7 @@ h1,h2,h3,h4,h5 {
 
 .cart {
   padding: 52px 0;
-  .cart__intro {
+  .cart {
     display: flex;
     align-items: center;
     margin-bottom: 35px;
@@ -2216,7 +2177,7 @@ h1,h2,h3,h4,h5 {
   .cart__btn-back {
     font-weight: 700;
     font-size: 14px;
-    color: #000;
+    color: #3b3328;
     margin-right: auto;
     margin-bottom: 40px;
     @include breakpoint(phone) {
@@ -2255,7 +2216,7 @@ h1,h2,h3,h4,h5 {
     }
     strong {
       margin-left: 15px;
-      color: #000;
+      color: #3b3328;
       font-weight: 700;
     }
   }
@@ -2420,14 +2381,13 @@ h1,h2,h3,h4,h5 {
 }
 
 .back-button-section {
-  padding: 30px 0;
-  margin-bottom: 30px;
+  padding: 15px 0;
   @include breakpoint(phone) {
     margin-bottom: 50px;
     padding: 50px 0;
   }
   a {
-    color: black;
+    color: #fff;
     font-size: 13px;
     font-weight: 600;
     @include breakpoint(phone) {
@@ -2441,13 +2401,23 @@ h1,h2,h3,h4,h5 {
 
 .form-page {
   padding-bottom: 100px;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  height: 100%;
+  position: absolute;
 }
 
 .form-block {
-  width: 100%;
+  max-width: 280px;
   margin: 0 auto;
+  color: #fff;
   @include breakpoint(phone) {
-    width: 448px;
+    max-width: 448px;
+  }
+  h2{
+    color: #fff;
   }
   .form-block__title {
     font-size: 22px;
@@ -2482,10 +2452,13 @@ h1,h2,h3,h4,h5 {
     height: 47px;
     width: 100%;
     font-weight: 500;
-    color: #808080;
+    color: #fff;
     padding: 0 22px;
     border-radius: 40px;
-    border: 1px solid #D8D8D8;
+    border: 1px solid #fff;
+    @include inputPlaceholder {
+      color: #fff;
+    }
     @include breakpoint(phone) {
       height: 56px;
       padding: 0 40px;
@@ -2537,7 +2510,7 @@ h1,h2,h3,h4,h5 {
   .form__signup-link {
     margin-top: 22px;
     font-size: 14px;
-    color: #000;
+    color: #fff;
     padding-bottom: 2px;
     text-align: center;
     a {
@@ -2610,7 +2583,8 @@ h1,h2,h3,h4,h5 {
   align-items: center;
   font-weight: 600;
   border-radius: 40px;
-  border: 1px solid #F1584D;
+  border: 1px solid #e26e66;
+  background-color: #e26e66;
   padding: 12px 30px;
   @include breakpoint(phone) {
     padding: 14px 58px;
@@ -2623,7 +2597,7 @@ h1,h2,h3,h4,h5 {
 .tooltip {
   z-index: 10;
   width: auto;
-  background: #FF0000;
+  background: #a78f80;
   color: white;
   border-radius: 6px;
   padding: 10px 15px;
@@ -2638,7 +2612,7 @@ h1,h2,h3,h4,h5 {
     bottom: -6px;
     border-style: solid;
     border-width: 7px 3px 0 3px;
-    border-color: #ff0000 transparent transparent transparent;
+    border-color: #a78f80 transparent transparent transparent;
   }
 }
 
@@ -2836,6 +2810,70 @@ h1,h2,h3,h4,h5 {
     color: red;
     &:before {
       background-color: red;
+    }
+  }
+}
+
+.reservation-content {
+  position: relative;
+  padding: 55px 0 55px 0;
+  @include breakpoint(phone) {
+    height: 100vh;
+    padding: 102px 0 92px 0;
+  }
+  .container {
+    align-items: center;
+    h3 {
+      font-size: 36px;
+      color: #1a1a1a;
+      font-weight: 600;
+      line-height: 120%;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      @include breakpoint(phone) {
+        font-size: 64px;
+        margin-bottom: 45px;
+        width: 600px;
+      }
+    }
+    h4 {
+      font-size: 16px;
+      // font-style: italic;
+      color: #1a1a1a;
+      font-weight: 400;
+      line-height: 140%;
+      @include breakpoint(phone) {
+        font-size: 28px;
+        width: 600px;
+      }
+    }
+  }
+  .reservation-item {
+    height: 770px;
+    display: flex;
+    margin-bottom: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 21px 22px;
+    position: relative;
+    @include breakpoint(phone) {
+      height: 775px;
+      padding: 55px 46px;
+      margin-bottom: 10px;
+    }
+    @include breakpoint(tablet-lg) {
+      margin-bottom: 0;
+    }
+    &:before {
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      height: 100%;
+      position: absolute;
+      background: rgba(0,0,0, 0.28);
     }
   }
 }

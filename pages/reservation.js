@@ -1,20 +1,18 @@
 import Layout from '../layouts/Main';
 import Footer from '../components/footer';
 import Breadcrumb from '../components/breadcrumb';
+import RoomContent from '../components/room-content';
 
-import PlaceContent from '../components/place-content';
-
-const Places = () => (
+const reservation = () => (
   <Layout>
-    <Breadcrumb />
-    <section className="products-page">
+    <section className="">
       <div className="container">
-        <PlaceContent />
+        <RoomContent />
       </div>
     </section>
     <Footer />
   </Layout>
-)
+)   
   
-export default Places;
+export default reservation
   

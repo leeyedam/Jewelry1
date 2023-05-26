@@ -3,16 +3,16 @@ import Footer from '../../components/footer';
 import Layout from '../../layouts/Main';
 import Breadcrumb from '../../components/breadcrumb';
 import ProductsFeatured from '../../components/products-featured';
-import Gallery from '../../components/facilities-single/gallery';
-import Content from '../../components/facilities-single/content';
-import Description from '../../components/facilities-single/description';
-import Reviews from '../../components/facilities-single/reviews';
+import Gallery from '../../components/room-single/gallery';
+import Content from '../../components/room-single/content';
+import Description from '../../components/room-single/description';
+import Reviews from '../../components/room-single/reviews';
 import { server } from '../../utils/server'; 
 
 export async function getServerSideProps({ query }) {
 
   const pid = query.pid;
-  const res = await fetch(`${server}/api/facilities/${pid}`);
+  const res = await fetch(`${server}/api/reservation/${pid}`);
   const product = await res.json();
 
   return {

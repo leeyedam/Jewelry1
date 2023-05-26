@@ -11,8 +11,8 @@ const ProductsFeatured = () => {
     <section className="section section-products-featured">
       <div className="container">
         <header className="section-products-featured__header">
-          <h3>Rooms</h3>
-          <a href="/rooms" className="btn btn--rounded btn--border">예약하기</a>
+          <h3>New Products</h3>
+          <a href="/products" className="btn btn--rounded btn--border">more</a>
         </header>
 
         <ProductsCarousel products={data} />

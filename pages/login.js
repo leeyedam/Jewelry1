@@ -19,9 +19,9 @@ const LoginPage = () => {
       <section className="form-page">
         <div className="container">
           <div className="back-button-section">
-            <Link href="/products">
+            {/* <Link href="/products">
               <a><i className="icon-left"></i> Back to store</a>
-            </Link>
+            </Link> */}
           </div>
 
           <div className="form-block">

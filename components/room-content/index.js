@@ -1,35 +1,23 @@
 import { useState } from 'react';
 import List from './list';
+import LoginPage from '../../pages/login';
 
 const RoomContent = () => {
   const [orderProductsOpen, setOrderProductsOpen] = useState(false);
   
   return (
-    <section className="products-content">
-      <div className="products-content__intro">
-        <h2>객실 안내 <span>(6)</span></h2>
-        <button type="button" onClick={() => setOrderProductsOpen(!orderProductsOpen)} className="products-filter-btn"><i className="icon-filters"></i></button>
-        <form className={`products-content__filter ${orderProductsOpen ? 'products-order-open' : ''}`}>
-          <div className="products__filter__select">
-            <h4>Show products: </h4>
-            <div className="select-wrapper">
-              <select>
-                <option>Popular</option>
-              </select>
-            </div>
+    <section className="reservation-content">
+      <div className="container">
+          <div style={{backgroundImage: 'url(/images/reservation-1.jpg)'}} className="reservation-item">
+          {/* <LoginPage/> */}
           </div>
-          <div className="products__filter__select">
-            <h4>Sort by: </h4>
-            <div className="select-wrapper">
-              <select>
-                <option>Popular</option>
-              </select>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <List />
+          <LoginPage/>
+          {/* <div className='featured-item-small-first'> 
+            <h3>About Us</h3>
+          <h4>We get design inspiration from nature. For example, it is reflected using colors and lines from the stone itself. Or inspired by trees and leaves.</h4>
+          </div> */}
+        </div>
+  
     </section>
   );
 };

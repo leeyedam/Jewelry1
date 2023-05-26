@@ -12,7 +12,7 @@ import { server } from '../../utils/server';
 export async function getServerSideProps({ query }) {
 
   const pid = query.pid;
-  const res = await fetch(`${server}/api/place/${pid}`);
+  const res = await fetch(`${server}/api/about/${pid}`);
   const product = await res.json();
 
   return {

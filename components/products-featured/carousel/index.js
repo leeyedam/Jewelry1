@@ -1,4 +1,4 @@
-import ProductItem from './../../facilities-item';
+import ProductItem from './../../room-item';
 
 // import Swiper core and required components
 import { Swiper, SwiperSlide } from 'swiper/react';

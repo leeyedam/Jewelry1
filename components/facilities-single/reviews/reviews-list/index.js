@@ -8,7 +8,7 @@ const ReviewsList = ({ reviews }) => {
 
   return (
     <section className="reviews-list">
-      {reviews.map(review => (
+      {/* {reviews.map(review => (
         <div className="review-item">
           <div className="review__avatar">
             <img src={ review.avatar } alt="avatar" />
@@ -21,7 +21,7 @@ const ReviewsList = ({ reviews }) => {
             </div>
           </div>
         </div>
-      ))}
+      ))} */}
     </section>
   );
 };

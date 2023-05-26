@@ -1,11 +1,11 @@
 // fake data
-import facilities from '../../../utils/data/facilities';
+import products from '../../../utils/data/products';
 
 export default (req, res) => {
   const {
     query: { pid },
   } = req
 
-  const facility = facilities.find(x => x.id === pid);
-  res.status(200).json(facility);
+  const product = products.find(x => x.id === pid);
+  res.status(200).json(product);
 }

@@ -40,6 +40,7 @@ const Content = ({ product }) => {
         address:product.address
       }
     ))
+    alert("Product has been added!")
   }
 
   return (
@@ -55,32 +56,8 @@ const Content = ({ product }) => {
       </div>
       <div className="product-content__filters">
         <div className="product-filter-item">
-          <h5><strong>날짜 선택</strong></h5>
-          <div className="checkbox-color-wrapper">
-            <div className="select-wrapper">
-              <select onChange={onSelectChange}>
-                <option>Choose Date</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div className="product-filter-item">
-          {/* <h5><strong>객실 선택</strong></h5>
-          <div className="checkbox-color-wrapper">
-            {productsColors.map(type => (
-              <CheckboxColor 
-                key={type.id} 
-                type={'checkbox'} 
-                name={type.color} 
-                color={type.color}
-                valueName={type.label}
-                onChange={onColorSet} 
-              />
-            ))}
-          </div> */}
-        </div>
-        <div className="product-filter-item">
-          <h5><strong>인원수:</strong></h5>
+          <h4>New product launch</h4>
+          <h5>A new product has been released. Make a reservation right now and get it faster than anyone else.</h5>
           <div className="quantity-buttons">
             <div className="quantity-button">
               <button type="button" onClick={() => setCount(count - 1)} className="quantity-button__btn">
@@ -92,7 +69,7 @@ const Content = ({ product }) => {
               </button>
             </div>
             
-            <button type="submit" onClick={() => addToCart()} className="btn btn--rounded btn--yellow">예약하기</button>
+            <button type="submit" onClick={() => addToCart()} className="btn btn--rounded btn--yellow">reservation</button>
             <button type="button" onClick={toggleFav} className={`btn-heart ${isFavourite ? 'btn-heart--active' : ''}`}><i className="icon-heart"></i></button>
           </div>
         </div>

@@ -54,27 +54,22 @@ const Header = ({ isErrorPage }) => {
           <a><h1 className="site-logo">THE LINE</h1></a>
         </Link>
         <nav ref={navRef} className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`}>
-          <Link href="/place">
-            <a>지점소개</a>
+          <Link href="/about">
+            <a>About</a>
           </Link>
-          <Link href="/facilities">
-            <a >시설안내</a>
+          <Link href="/products">
+            <a >Products</a>
           </Link>
-          <Link href="/rooms">
-            <a>객실안내</a>
+          <Link href="/reservation">
+            <a>Reservation</a>
+          </Link>
+          <Link href="/login">
+          <button className="site-nav__btn"><p>Account</p></button>
           </Link>
           
-          <button className="site-nav__btn"><p>Account</p></button>
         </nav>
 
         <div className="site-header__actions">
-          <button ref={searchRef} className={`search-form-wrapper ${searchOpen ? 'search-form--active' : ''}`}>
-            <form className={`search-form`}>
-              <i className="icon-cancel" onClick={() => setSearchOpen(!searchOpen)}></i>
-              <input type="text" name="search" placeholder="검색어를 입력해 주세요." />
-            </form>  
-            <i onClick={() => setSearchOpen(!searchOpen)}  className="icon-search"></i>
-          </button>
           <Link href="/cart">
             <button className="btn-cart">
               <i className="icon-cart"></i>
