@@ -1,5 +1,5 @@
 import useSwr from "swr";
-import ProductItem from "./../../facilities-item";
+import ProductItem from "../../facilities-item";
 import ProductsLoading from "./loading";
 import products from "../../../utils/data/facilities";
 

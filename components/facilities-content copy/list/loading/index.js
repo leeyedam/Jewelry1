@@ -1,4 +1,4 @@
-import ProductItemLoading from "./../../../facilities-item/loading";
+import ProductItemLoading from "../../../facilities-item/loading";
 
 const ProductsLoading = () => {
   return (

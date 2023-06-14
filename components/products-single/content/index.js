@@ -36,7 +36,8 @@ const Content = ({ product }) => {
         price: product.currentPrice,
         count: count,
         color: color,
-        size: itemSize
+        size: itemSize,
+        address:product.address
       }
     ))
   }
@@ -49,7 +50,7 @@ const Content = ({ product }) => {
         <h2 className="product__name">{product.name}</h2>
 
         <div className="product__prices">
-          <h4>서울 종로구 효자로 12 더라인 호텔</h4>
+          <h4>{product.address}</h4>
         </div>
       </div>
       <div className="product-content__filters">
